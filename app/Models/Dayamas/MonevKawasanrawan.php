@@ -10,6 +10,8 @@ class MonevKawasanrawan extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'dayamas_altdev_monev_kawasanrawan';
     public $timestamps    = false;
     protected $guarded    = ['id'];
