@@ -10,6 +10,8 @@ class HukumPendampingan extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'hukerhukum_pendampingan';
     public $timestamps    = false;
     protected $guarded    = ['id'];

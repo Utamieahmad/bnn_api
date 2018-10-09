@@ -10,6 +10,8 @@ class KerjasamaLainnya extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'hukerkerjasama_lainnya';
     public $timestamps    = false;
     protected $guarded    = ['id'];

@@ -10,6 +10,8 @@ class KerjasamaSosialisasi extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'hukerkerjasama_sosialisasi';
     public $timestamps    = false;
     protected $guarded    = ['id'];
