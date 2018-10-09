@@ -4,6 +4,7 @@ namespace App\Models\Huker;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class HukumPraperadilan extends Authenticatable
 {
