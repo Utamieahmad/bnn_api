@@ -10,6 +10,8 @@ class PengecekanJaringan extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'datin_pengecekan_jaringan';
     public $timestamps    = true;
     protected $guarded    = ['id'];

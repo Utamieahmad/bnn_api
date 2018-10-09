@@ -10,6 +10,8 @@ class PecanduSuntik extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'datin_research_pecandu_suntik';
     public $timestamps    = false;
     protected $guarded    = ['id'];

@@ -10,6 +10,8 @@ class Riset extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'datin_research_riset';
     public $timestamps    = true;
     protected $guarded    = ['id'];

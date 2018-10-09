@@ -10,6 +10,8 @@ class ViewDatinPengadaanEmail extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'v_datin_pengadaan_email';
     public $timestamps    = true;
     protected $guarded    = ['id'];
