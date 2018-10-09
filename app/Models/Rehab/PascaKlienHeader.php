@@ -10,6 +10,8 @@ class PascaKlienHeader extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $primaryKey = 'id_header';
     protected $table      = 'rehab_pasca_klien_header';
     public $timestamps    = false;

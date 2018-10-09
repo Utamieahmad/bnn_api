@@ -10,6 +10,8 @@ class RikturiksusTerperiksa extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $primaryKey = 'id_terperiksa';
     protected $table      = 'irtama_rikturiksus_terperiksa';
     public $timestamps    = false;

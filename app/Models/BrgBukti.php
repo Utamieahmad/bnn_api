@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class BrgBukti extends Model
 {
     //
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     public $table       = "v_barang_bukti";
     public $timestamps  = false;
     protected $hidden   = ['id_brgbukti'];

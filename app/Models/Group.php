@@ -9,6 +9,8 @@ class Group extends Authenticatable
 {
     /* @author : Daniel Andi */
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'rbac_groups';
     protected $primaryKey = 'group_id';
     protected $fillable   = ['group_name'];

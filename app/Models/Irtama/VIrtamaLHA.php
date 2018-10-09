@@ -10,6 +10,8 @@ class VIrtamaLHA extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'v_irtama_lha';
     public $timestamps    = true;
     protected $guarded    = ['id_lha'];

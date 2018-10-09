@@ -9,6 +9,8 @@ class SekretariatUtama extends Authenticatable
 {
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'sekretariat_utama';
     protected $guarded    = ['id_settama'];
     protected $primaryKey = 'id_settama';

@@ -10,6 +10,8 @@ class PasienSirena extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $primaryKey = 'idx';
     protected $table      = 'sirena_t_pasien_assesment';
     public $timestamps    = false;

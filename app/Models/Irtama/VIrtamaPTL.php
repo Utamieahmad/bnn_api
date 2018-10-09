@@ -10,6 +10,8 @@ class VIrtamaPTL extends Authenticatable
     /* @author : Daniel Andi */
 
     use Notifiable;
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
     protected $table      = 'v_irtama_ptl';
     public $timestamps    = false;
     protected $guarded    = ['id_ptl'];
