@@ -4,6 +4,7 @@ namespace App\Models\Settama;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class VSekretariatUtama extends Authenticatable
 {
