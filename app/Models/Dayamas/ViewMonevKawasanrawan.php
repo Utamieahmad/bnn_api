@@ -4,6 +4,7 @@ namespace App\Models\Dayamas;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ViewMonevKawasanrawan extends Authenticatable
 {
