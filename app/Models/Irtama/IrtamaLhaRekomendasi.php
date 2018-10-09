@@ -4,6 +4,7 @@ namespace App\Models\Irtama;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class IrtamaLhaRekomendasi extends Authenticatable
 {
