@@ -78,7 +78,7 @@
     *     name="tgl_kadaluarsa",
     *     in="formData",
     *     description="tgl_kadaluarsa",
-    *     required=true,
+    *     required=false,
     *     type="string"
     *   ),
     *   @SWG\Parameter(
