@@ -224,21 +224,21 @@
            *     name="nama_kegiatan",
            *     in="formData",
            *     description="nama_kegiatan",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
            *     name="tgl_pelaksanaan",
            *     in="formData",
            *     description="tgl_pelaksanaan",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
            *     name="tempat",
            *     in="formData",
            *     description="tempat",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
@@ -252,7 +252,7 @@
            *     name="tempat_idkabkota",
            *     in="formData",
            *     description="tempat_idkabkota",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
@@ -308,7 +308,7 @@
            *     name="kodeanggaran",
            *     in="formData",
            *     description="kodeanggaran",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
@@ -322,14 +322,14 @@
            *     name="status",
            *     in="formData",
            *     description="status",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
            *     name="tgl_selesai",
            *     in="formData",
            *     description="tgl_selesai",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
@@ -343,14 +343,14 @@
            *     name="jenis_diklat",
            *     in="formData",
            *     description="jenis_diklat",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Parameter(
            *     name="tujuan_kegiatan",
            *     in="formData",
            *     description="tujuan_kegiatan",
-           *     required=true,
+           *     required=false,
            *     type="string"
            *   ),
            *   @SWG\Response(response=200, description="successful operation"),
