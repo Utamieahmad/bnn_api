@@ -24,15 +24,15 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "get data by id",
-                        "required": true,
+                        "description": "page",
+                        "required": false,
                         "type": "integer"
                     },
                     {
                         "name": "limit",
                         "in": "query",
-                        "description": "get data by id",
-                        "required": true,
+                        "description": "limit data",
+                        "required": false,
                         "type": "integer"
                     }
                 ],
@@ -306,6 +306,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -550,6 +564,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -976,6 +1004,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -1269,6 +1311,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -1759,6 +1815,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -2087,6 +2157,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -2843,6 +2927,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -3637,6 +3735,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -3960,6 +4072,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -4274,6 +4400,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -4686,6 +4826,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -5098,6 +5252,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -6210,6 +6378,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -6534,6 +6716,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -7647,6 +7843,20 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -8655,6 +8865,22 @@
                 ],
                 "summary": "Get List User",
                 "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "successful operation"
