@@ -3932,6 +3932,320 @@
                 }
             }
         },
+        "/pascaklienheader": {
+            "get": {
+                "tags": [
+                    "Rehab Pasca klien Header"
+                ],
+                "summary": "Get List Data Rehab pasca klien header",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Rehab Pasca klien Header"
+                ],
+                "summary": "Create Data Rehab pasca klien header",
+                "operationId": "create data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id_instansi",
+                        "in": "formData",
+                        "description": "ID instansi",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id_provinsi",
+                        "in": "formData",
+                        "description": "ID provinsi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "tgl_pelaksanaan_mulai",
+                        "in": "formData",
+                        "description": "Tanggal mulai pelaksanaan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_pelaksanaan_selesai",
+                        "in": "formData",
+                        "description": "Tanggal selesai pelaksanaan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tipe",
+                        "in": "formData",
+                        "description": "Tipe",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_tahun",
+                        "in": "formData",
+                        "description": "Tahun periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_bulan",
+                        "in": "formData",
+                        "description": "Bulan periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jumlah_klien",
+                        "in": "formData",
+                        "description": "Jumlah klien",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_jenis_layanan",
+                        "in": "formData",
+                        "description": "Kode jenis layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jumlah_uang_klaim",
+                        "in": "formData",
+                        "description": "Jumlah uang klaim",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/pascaklienheader/{id}": {
+            "get": {
+                "tags": [
+                    "Rehab Pasca klien Header"
+                ],
+                "summary": "Get List Data Rehab pasca klien header by id",
+                "operationId": "get data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rehab Pasca klien Header"
+                ],
+                "summary": "Update Data Rehab pasca klien header",
+                "operationId": "update data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id_instansi",
+                        "in": "formData",
+                        "description": "ID instansi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id_provinsi",
+                        "in": "formData",
+                        "description": "ID provinsi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "tgl_pelaksanaan_mulai",
+                        "in": "formData",
+                        "description": "Tanggal mulai pelaksanaan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_pelaksanaan_selesai",
+                        "in": "formData",
+                        "description": "Tanggal selesai pelaksanaan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tipe",
+                        "in": "formData",
+                        "description": "Tipe",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_tahun",
+                        "in": "formData",
+                        "description": "Tahun periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_bulan",
+                        "in": "formData",
+                        "description": "Bulan periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jumlah_klien",
+                        "in": "formData",
+                        "description": "Jumlah klien",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_jenis_layanan",
+                        "in": "formData",
+                        "description": "Kode jenis layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jumlah_uang_klaim",
+                        "in": "formData",
+                        "description": "Jumlah uang klaim",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rehab Pasca klien Header"
+                ],
+                "summary": "Delete Data pasca klien header By id",
+                "operationId": "delete data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
         "/pascaklienjalan": {
             "get": {
                 "tags": [
