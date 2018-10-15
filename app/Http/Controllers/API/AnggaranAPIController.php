@@ -51,7 +51,7 @@ class AnggaranAPIController extends Controller
             // $data = Anggaran::where([['status', 1], ['tersangka_id', $id]])->first();
 
             if (!$data){
-              return response()->json(Json::response(null, 'error', "data kosong", 404), 200);
+              return response()->json(Json::response(null, 'error', "data kosong", 404), 404);
             } else {
               return response()->json(Json::response($data, 'sukses', null), 200);
             }
