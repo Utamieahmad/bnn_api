@@ -4058,6 +4058,362 @@
                 }
             }
         },
+        "/nspk": {
+            "get": {
+                "tags": [
+                    "Rehab Nspk"
+                ],
+                "summary": "Get List Data Rehab Nspk",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Rehab Nspk"
+                ],
+                "summary": "Create Data Rehab Nspk",
+                "operationId": "create data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kategori",
+                        "in": "formData",
+                        "description": "Kategori",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_direktorat",
+                        "in": "formData",
+                        "description": "Kode direktorat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_pembuatan",
+                        "in": "formData",
+                        "description": "Tanggal pembuatan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama_nspk",
+                        "in": "formData",
+                        "description": "Nama Nspk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nomor_nsdpk",
+                        "in": "formData",
+                        "description": "No nsdpk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "peruntukan",
+                        "in": "formData",
+                        "description": "Peruntukan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "file_nspk",
+                        "in": "formData",
+                        "description": "File nspk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status_aktif",
+                        "in": "formData",
+                        "description": "Status aktif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_tahun",
+                        "in": "formData",
+                        "description": "Periode tahun",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_bulan",
+                        "in": "formData",
+                        "description": "Periode bulan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_tanggal",
+                        "in": "formData",
+                        "description": "Periode tanggal",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/nspk/{id}": {
+            "get": {
+                "tags": [
+                    "Rehab Nspk"
+                ],
+                "summary": "Get List Data Rehab Nspk by id",
+                "operationId": "get data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rehab Nspk"
+                ],
+                "summary": "Update Data Rehab Nspk",
+                "operationId": "update data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kategori",
+                        "in": "formData",
+                        "description": "Kategori",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_direktorat",
+                        "in": "formData",
+                        "description": "Kode direktorat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_pembuatan",
+                        "in": "formData",
+                        "description": "Tanggal pembuatan (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama_nspk",
+                        "in": "formData",
+                        "description": "Nama Nspk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nomor_nsdpk",
+                        "in": "formData",
+                        "description": "No nsdpk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "peruntukan",
+                        "in": "formData",
+                        "description": "Peruntukan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "file_nspk",
+                        "in": "formData",
+                        "description": "File nspk",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status_aktif",
+                        "in": "formData",
+                        "description": "Status aktif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_tahun",
+                        "in": "formData",
+                        "description": "Periode tahun",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_bulan",
+                        "in": "formData",
+                        "description": "Periode bulan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_tanggal",
+                        "in": "formData",
+                        "description": "Periode tanggal",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "Status",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rehab Nspk"
+                ],
+                "summary": "Delete Data Rehab nspk By id",
+                "operationId": "delete data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
         "/pascaklienheader": {
             "get": {
                 "tags": [
