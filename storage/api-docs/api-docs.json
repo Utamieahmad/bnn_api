@@ -3932,10 +3932,422 @@
                 }
             }
         },
+        "/pascaklienjalan": {
+            "get": {
+                "tags": [
+                    "Rehab Pasca Klien Rawat Jalan"
+                ],
+                "summary": "Get List Data Rehab klien rawat jalan",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Rehab Pasca Klien Rawat Jalan"
+                ],
+                "summary": "Create Data Rehab pasien rawat jalan",
+                "operationId": "create data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id_header",
+                        "in": "formData",
+                        "description": "ID header",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "nama",
+                        "in": "formData",
+                        "description": "Nama",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "no_identitas",
+                        "in": "formData",
+                        "description": "Nomor identitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat",
+                        "in": "formData",
+                        "description": "Alamat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_jeniskelamin",
+                        "in": "formData",
+                        "description": "Kode jenis kelamin",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "no_hape",
+                        "in": "formData",
+                        "description": "No hp",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_layanan_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 02",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_03",
+                        "in": "formData",
+                        "description": "Jenis layanan 03",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_05",
+                        "in": "formData",
+                        "description": "Jenis layanan 05",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_06_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 06 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_lainnya",
+                        "in": "formData",
+                        "description": "Jenis layanan lainnya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_layanan_lainnya_jumlah",
+                        "in": "formData",
+                        "description": "Jumlah Jenis layanan lainnya",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 02",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_03",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 03",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_06_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 06 02",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/pascaklienjalan/{id}": {
+            "get": {
+                "tags": [
+                    "Rehab Pasca Klien Rawat Jalan"
+                ],
+                "summary": "Get List Data Rehab klien rawat jalan by id",
+                "operationId": "get data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rehab Pasca Klien Rawat Jalan"
+                ],
+                "summary": "Update Data Rehab pasien rawat jalan",
+                "operationId": "update data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id_header",
+                        "in": "formData",
+                        "description": "ID header",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "nama",
+                        "in": "formData",
+                        "description": "Nama",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "no_identitas",
+                        "in": "formData",
+                        "description": "Nomor identitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat",
+                        "in": "formData",
+                        "description": "Alamat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_jeniskelamin",
+                        "in": "formData",
+                        "description": "Kode jenis kelamin",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "no_hape",
+                        "in": "formData",
+                        "description": "No hp",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_layanan_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 02",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_03",
+                        "in": "formData",
+                        "description": "Jenis layanan 03",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_05",
+                        "in": "formData",
+                        "description": "Jenis layanan 05",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_06_01",
+                        "in": "formData",
+                        "description": "Jenis layanan 06 01",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_lainnya",
+                        "in": "formData",
+                        "description": "Jenis layanan lainnya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_layanan_lainnya_jumlah",
+                        "in": "formData",
+                        "description": "Jumlah Jenis layanan lainnya",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 02",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_04_03",
+                        "in": "formData",
+                        "description": "Jenis layanan 04 03",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jenis_layanan_06_02",
+                        "in": "formData",
+                        "description": "Jenis layanan 06 02",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rehab Pasca Klien Rawat Jalan"
+                ],
+                "summary": "Delete Data pasien rawat jalan By id",
+                "operationId": "delete data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
         "/pascaklienlanjut": {
             "get": {
                 "tags": [
-                    "Rehab Pasien Pasca Klien Rawat Lanjut"
+                    "Rehab Pasca Klien Rawat Lanjut"
                 ],
                 "summary": "Get List Data Rehab pasien rawat lanjut",
                 "operationId": "get data",
@@ -3962,7 +4374,7 @@
             },
             "post": {
                 "tags": [
-                    "Rehab Pasien Pasca Klien Rawat Lanjut"
+                    "Rehab Pasca Klien Rawat Lanjut"
                 ],
                 "summary": "Create Data Rehab pasien rawat lanjut",
                 "operationId": "create data",
@@ -4117,7 +4529,7 @@
         "/pascaklienlanjut/{id}": {
             "get": {
                 "tags": [
-                    "Rehab Pasien Pasca Klien Rawat Lanjut"
+                    "Rehab Pasca Klien Rawat Lanjut"
                 ],
                 "summary": "Get List Data Rehab pasien rawat lanjut by id",
                 "operationId": "get data by id",
@@ -4151,7 +4563,7 @@
             },
             "put": {
                 "tags": [
-                    "Rehab Pasien Pasca Klien Rawat Lanjut"
+                    "Rehab Pasca Klien Rawat Lanjut"
                 ],
                 "summary": "Update Data Rehab pasien rawat lanjut",
                 "operationId": "update data",
@@ -4311,7 +4723,7 @@
             },
             "delete": {
                 "tags": [
-                    "Rehab Pasien Pasca Klien Rawat Lanjut"
+                    "Rehab Pasca Klien Rawat Lanjut"
                 ],
                 "summary": "Delete Data pasien rawat lanjut By id",
                 "operationId": "delete data by id",

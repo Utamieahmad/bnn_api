@@ -2,9 +2,9 @@
 
 /**
     * @SWG\Get(
-    *   path="/pascaklienlanjut",
-    *   tags={"Rehab Pasca Klien Rawat Lanjut"},
-    *   summary="Get List Data Rehab pasien rawat lanjut",
+    *   path="/pascaklienjalan",
+    *   tags={"Rehab Pasca Klien Rawat Jalan"},
+    *   summary="Get List Data Rehab klien rawat jalan",
     *   operationId="get data",
     *   @SWG\Parameter(
     *     name="Authorization",
@@ -22,9 +22,9 @@
 
 /**
     * @SWG\Get(
-    *   path="/pascaklienlanjut/{id}",
-    *   tags={"Rehab Pasca Klien Rawat Lanjut"},
-    *   summary="Get List Data Rehab pasien rawat lanjut by id",
+    *   path="/pascaklienjalan/{id}",
+    *   tags={"Rehab Pasca Klien Rawat Jalan"},
+    *   summary="Get List Data Rehab klien rawat jalan by id",
     *   operationId="get data by id",
     *   @SWG\Parameter(
     *     name="Authorization",
@@ -49,9 +49,9 @@
 
 /**
     * @SWG\Post(
-    *   path="/pascaklienlanjut",
-    *   tags={"Rehab Pasca Klien Rawat Lanjut"},
-    *   summary="Create Data Rehab pasien rawat lanjut",
+    *   path="/pascaklienjalan",
+    *   tags={"Rehab Pasca Klien Rawat Jalan"},
+    *   summary="Create Data Rehab pasien rawat jalan",
     *   operationId="create data",
     *   @SWG\Parameter(
     *     name="Authorization",
@@ -195,9 +195,9 @@
 
 /**
     * @SWG\Put(
-    *   path="/pascaklienlanjut/{id}",
-    *   tags={"Rehab Pasca Klien Rawat Lanjut"},
-    *   summary="Update Data Rehab pasien rawat lanjut",
+    *   path="/pascaklienjalan/{id}",
+    *   tags={"Rehab Pasca Klien Rawat Jalan"},
+    *   summary="Update Data Rehab pasien rawat jalan",
     *   operationId="update data",
     *   @SWG\Parameter(
     *     name="Authorization",
@@ -348,9 +348,9 @@
 
 /**
     * @SWG\Delete(
-    *   path="/pascaklienlanjut/{id}",
-    *   tags={"Rehab Pasca Klien Rawat Lanjut"},
-    *   summary="Delete Data pasien rawat lanjut By id",
+    *   path="/pascaklienjalan/{id}",
+    *   tags={"Rehab Pasca Klien Rawat Jalan"},
+    *   summary="Delete Data pasien rawat jalan By id",
     *   operationId="delete data by id",
     *   @SWG\Parameter(
     *     name="Authorization",
