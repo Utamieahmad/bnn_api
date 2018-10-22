@@ -24,15 +24,15 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "description": "page",
-                        "required": false,
+                        "description": "get data by id",
+                        "required": true,
                         "type": "integer"
                     },
                     {
                         "name": "limit",
                         "in": "query",
-                        "description": "limit data",
-                        "required": false,
+                        "description": "get data by id",
+                        "required": true,
                         "type": "integer"
                     }
                 ],
@@ -306,20 +306,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -366,7 +352,7 @@
                         "name": "tgl_kadaluarsa",
                         "in": "formData",
                         "description": "tgl_kadaluarsa",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
@@ -564,20 +550,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -813,21 +785,21 @@
                         "name": "nama_kegiatan",
                         "in": "formData",
                         "description": "nama_kegiatan",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
                         "name": "tgl_pelaksanaan",
                         "in": "formData",
                         "description": "tgl_pelaksanaan",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
                         "name": "tempat",
                         "in": "formData",
                         "description": "tempat",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
@@ -841,7 +813,7 @@
                         "name": "tempat_idkabkota",
                         "in": "formData",
                         "description": "tempat_idkabkota",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
@@ -897,7 +869,7 @@
                         "name": "kodeanggaran",
                         "in": "formData",
                         "description": "kodeanggaran",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
@@ -911,14 +883,14 @@
                         "name": "status",
                         "in": "formData",
                         "description": "status",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
                         "name": "tgl_selesai",
                         "in": "formData",
                         "description": "tgl_selesai",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
@@ -932,14 +904,14 @@
                         "name": "jenis_diklat",
                         "in": "formData",
                         "description": "jenis_diklat",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     },
                     {
                         "name": "tujuan_kegiatan",
                         "in": "formData",
                         "description": "tujuan_kegiatan",
-                        "required": false,
+                        "required": true,
                         "type": "string"
                     }
                 ],
@@ -1004,20 +976,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -1311,20 +1269,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -1815,20 +1759,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -2157,20 +2087,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -2927,20 +2843,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -3735,20 +3637,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -6734,20 +6622,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -7072,20 +6946,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -8199,20 +8059,6 @@
                         "description": "Authorization Token",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
                     }
                 ],
                 "responses": {
@@ -9221,22 +9067,6 @@
                 ],
                 "summary": "Get List User",
                 "operationId": "get data",
-                "parameters": [
-                    {
-                        "name": "page",
-                        "in": "query",
-                        "description": "page",
-                        "required": false,
-                        "type": "integer"
-                    },
-                    {
-                        "name": "limit",
-                        "in": "query",
-                        "description": "limit data",
-                        "required": false,
-                        "type": "integer"
-                    }
-                ],
                 "responses": {
                     "200": {
                         "description": "successful operation"
