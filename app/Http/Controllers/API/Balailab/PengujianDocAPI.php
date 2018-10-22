@@ -238,70 +238,70 @@
           *     name="nomor_surat_permohonan_pengajuan",
           *     in="formData",
           *     description="nomor_surat_permohonan_pengajuan",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="tgl_surat",
           *     in="formData",
           *     description="tgl_surat",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="perihal_surat",
           *     in="formData",
           *     description="perihal_surat",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="no_lplkn",
           *     in="formData",
           *     description="no_lplkn",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="tgl_lplkn",
           *     in="formData",
           *     description="tgl_lplkn",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="jenis_kasus",
           *     in="formData",
           *     description="jenis_kasus",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="nama_instansi",
           *     in="formData",
           *     description="nama_instansi",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="nama_pengirim",
           *     in="formData",
           *     description="nama_pengirim",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="pangkat_gol",
           *     in="formData",
           *     description="pangkat_gol",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="no_telp_pengirim",
           *     in="formData",
           *     description="no_telp_pengirim",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
@@ -322,49 +322,49 @@
           *     name="kuantitas",
           *     in="formData",
           *     description="kuantitas",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="satuan",
           *     in="formData",
           *     description="satuan",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="warna",
           *     in="formData",
           *     description="warna",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="logo",
           *     in="formData",
           *     description="logo",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="laporan_hasil",
           *     in="formData",
           *     description="laporan_hasil",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="hasil_uji",
           *     in="formData",
           *     description="hasil_uji",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
           *     name="status_aktif",
           *     in="formData",
           *     description="status_aktif",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Parameter(
@@ -378,7 +378,7 @@
           *     name="kode_jnsbrgbukti",
           *     in="formData",
           *     description="kode_jnsbrgbukti",
-          *     required=true,
+          *     required=false,
           *     type="string"
           *   ),
           *   @SWG\Response(response=200, description="successful operation"),

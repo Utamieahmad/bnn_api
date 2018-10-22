@@ -202,49 +202,49 @@
       *     name="tgl_razia",
       *     in="formData",
       *     description="tgl_razia",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="lokasi",
       *     in="formData",
       *     description="lokasi",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="koordinat",
       *     in="formData",
       *     description="koordinat",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="uraian_singkat",
       *     in="formData",
       *     description="uraian_singkat",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="jumlah_dirazia",
       *     in="formData",
       *     description="jumlah_dirazia",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="jumlah_terindikasi",
       *     in="formData",
       *     description="jumlah_terindikasi",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
       *     name="jumlah_ditemukan",
       *     in="formData",
       *     description="jumlah_ditemukan",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Parameter(
@@ -279,7 +279,7 @@
       *     name="id_instansi",
       *     in="formData",
       *     description="id_instansi",
-      *     required=true,
+      *     required=false,
       *     type="string"
       *   ),
       *   @SWG\Response(response=200, description="successful operation"),
