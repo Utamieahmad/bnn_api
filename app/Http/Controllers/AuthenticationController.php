@@ -564,4 +564,8 @@ class AuthenticationController extends Controller
       return view('auth.usermanual',$data);
   }
 
+  public function redirectToSwagger(){ //redericetto swagger documentation
+    return redirect('/api/documentation');
+  }
+
 }
