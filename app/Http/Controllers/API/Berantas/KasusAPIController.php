@@ -9,6 +9,7 @@ use App\Models\Berantas\ViewKasusTersangka as Tersangka;
 use App\Models\Berantas\ViewKasusBrgBukti as BrgBukti;
 use App\Http\Controllers\Controller;
 use App\Transformers\Json;
+use App\Models\Berantas\Pemusnahan;
 
 class KasusAPIController extends Controller
 {
@@ -274,6 +275,21 @@ class KasusAPIController extends Controller
 
             $data = ViewKasus::select('kasus_id', 'kasus_no')->where($kondisi)->orWhere($kondisi2)->get();
 
+            if (!$data){
+              return response()->json(Json::response(null, 'error', "data kosong", 404), 404);
+            } else {
+              return response()->json(Json::response($data, 'sukses', null), 200);
+            }
+        } catch(\Exception $e) {
+            return response()->json(Json::response(null, 'error', $e->getMessage()), 200);
+
+        }
+    }
+    
+    public function getListLKNMobile(Request $request, $id_kasus)
+    {        
+        try {
+            $data = Pemusnahan::where('id_kasus', $id_kasus)->first();            
             if (!$data){
               return response()->json(Json::response(null, 'error', "data kosong", 404), 404);
             } else {
