@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
         if ($request->expectsJson()) {
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
-        // return redirect()->guest(route('login')); //default laravel
-        return redirect()->guest(route('swagger')); //redirect to api swagger
+
+        return redirect()->guest(route('login'));
     }
 }
