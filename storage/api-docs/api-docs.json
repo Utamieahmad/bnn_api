@@ -4,7 +4,7 @@
         "title": "API Documentation BNN",
         "version": "1.0.0"
     },
-    "basePath": "/bnn_api/public/api",
+    "basePath": "/bnn/public/api",
     "paths": {
         "/anggaran": {
             "get": {

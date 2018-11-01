@@ -138,8 +138,8 @@ class AuthenticationController extends Controller
 
       $credential = array('email'=>$email,'password'=>$password);
 
-      $baseUrl = URL::to('/');
-
+      // $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
       // dd($request->all());
 
       $client = new Client();
@@ -227,7 +227,8 @@ class AuthenticationController extends Controller
 
   public function nip_process(Request $request)
   {
-    $baseUrl = URL::to('/');
+    // $baseUrl = URL::to('/');
+    $baseUrl = URL::to($this->urlapi());
     $client = new Client();
     $credential = $request->session()->get('credential');
     $token = $request->session()->get('token');
@@ -336,7 +337,8 @@ class AuthenticationController extends Controller
         if ($user < 1) {
             $client = new Client();
 
-            $baseUrl = URL::to('/');
+            // $baseUrl = URL::to('/');
+            $baseUrl = URL::to($this->urlapi());
             $token = 'token';
             // $token = $request->session()->get('token');
 
@@ -562,7 +564,7 @@ class AuthenticationController extends Controller
       return view('auth.usermanual',$data);
   }
 
-  public function redirectToSwagger(){ //redericet to swagger documentation
+  public function redirectToSwagger(){ //redericetto swagger documentation
     return redirect('/api/documentation');
   }
 

@@ -216,7 +216,8 @@ class MasyarakatController extends Controller
     public function editpendataanTesNarkoba(Request $request){
      $id = $request->id;
      $client = new Client();
-     $baseUrl = URL::to('/');
+     $baseUrl = URL::to($this->urlapi());
+//     $baseUrl = URL::to('/');
      $token = $request->session()->get('token');
 
      $requestTest= $client->request('GET', $baseUrl.'/api/tesnarkobaheader/'.$id,
@@ -288,12 +289,57 @@ class MasyarakatController extends Controller
 
     public function inputPendataanTesNarkoba(Request $request){
 
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
 
        // dd($request->all());
 
        $client = new Client();
+       
+       //generate image base64
+        if($request->hasFile('foto1')){
+            $filenameWithExt = $request->file('foto1')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto1')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto1')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image1 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image1 = null;
+        }
+
+        if($request->hasFile('foto2')){
+            $filenameWithExt = $request->file('foto2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto2')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto2')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image2 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image2 = null;
+        }
+
+        if($request->hasFile('foto3')){
+            $filenameWithExt = $request->file('foto3')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto3')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto3')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image3 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image3 = null;
+        }
+       
        $form_params = [
            'periode' => date('Ym', strtotime(str_replace('/', '-', $request->input('tgl_tes')))),
            'id_instansi' => $request->input('idpelaksana'),
@@ -302,6 +348,12 @@ class MasyarakatController extends Controller
            'jmlh_peserta' => $request->input('jumlah_peserta'),
            'no_surat_permohonan' => $request->input('no_surat_permohonan'),
            'kodesumberanggaran' => $request->input('kodesumberanggaran'),
+           'lokasi' => $request->input('lokasi'),
+           'jmlh_positif' => $request->input('jmlh_positif'),           
+           'keterangan_lainnya' => $request->input('keterangan_lainnya'),           
+           'foto1' => $image1,
+           'foto2' => $image2,
+           'foto3' => $image3,
            'status' => 'N',
        ];
        if ($request->input('kodesumberanggaran')=="DIPA") {
@@ -401,10 +453,55 @@ class MasyarakatController extends Controller
     public function updatePendataanTesNarkoba(Request $request){
        $id = $request->input('id');
 
-        $baseUrl = URL::to('/');
-        $token = $request->session()->get('token');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
+        $token = $request->session()->get('token');        
 
         $client = new Client();
+        
+        //generate image base64
+        if($request->hasFile('foto1')){
+            $filenameWithExt = $request->file('foto1')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto1')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto1')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image1 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image1 = $request->input('foto1_old');
+        }
+
+        if($request->hasFile('foto2')){
+            $filenameWithExt = $request->file('foto2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto2')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto2')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image2 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image2 = $request->input('foto2_old');
+        }
+
+        if($request->hasFile('foto3')){
+            $filenameWithExt = $request->file('foto3')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto3')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto3')->storeAs('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image3 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratPeranSertaMasyarakat/TesNarkoba/'.$fileNameToStore);
+        }else{
+          $image3 = $request->input('foto3_old');
+        }
+        
         if ($request->input('kodesumberanggaran')=="DIPA") {
           if($request->kd_anggaran){
              $requestAnggaran = $client->request('POST', $baseUrl.'/api/anggaran',
@@ -448,6 +545,12 @@ class MasyarakatController extends Controller
           'jmlh_peserta' => $request->input('jumlah_peserta'),
           'no_surat_permohonan' => $request->input('no_surat_permohonan'),
           'kodesumberanggaran' => $request->input('kodesumberanggaran'),
+          'lokasi' => $request->input('lokasi'),
+          'jmlh_positif' => $request->input('jmlh_positif'),           
+          'keterangan_lainnya' => $request->input('keterangan_lainnya'),           
+          'foto1' => $image1,
+          'foto2' => $image2,
+          'foto3' => $image3,
           'anggaran_id' => $anggaran,
         ];
         $requestTes = $client->request('PUT', $baseUrl.'/api/tesnarkobaheader/'.$id,      [
@@ -485,7 +588,8 @@ class MasyarakatController extends Controller
 
     public function inputPeserta(Request $request){
        $id = $request->input('id');
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
        $client = new Client();
 
@@ -560,7 +664,8 @@ class MasyarakatController extends Controller
     public function updatePeserta(Request $request){
        $id = $request->input('id');
        $pesertaid = $request->input('peserta_id');
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
 
        $client = new Client();
@@ -785,7 +890,8 @@ class MasyarakatController extends Controller
 
     public function addpendataanAntiNarkoba(Request $request){
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $this->data['title']="psmpenggiat";
 
         $requestPropinsiKabupaten = $client->request('GET', $baseUrl.'/api/getpropkab');
@@ -804,7 +910,8 @@ class MasyarakatController extends Controller
     public function editpendataanAntiNarkoba(Request $request){
         $id = $request->id;
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
        $requestDataDetail= $client->request('GET', $baseUrl.'/api/psmpenggiat/'.$id,
@@ -834,7 +941,8 @@ class MasyarakatController extends Controller
 
     public function inputpendataanAntiNarkoba(Request $request){
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $client = new Client();
@@ -925,7 +1033,8 @@ class MasyarakatController extends Controller
     public function updatependataanAntiNarkoba(Request $request){
       $id = $request->input('id');
 
-      $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
+//      $baseUrl = URL::to('/');
       $token = $request->session()->get('token');
 
       $client = new Client();
@@ -1163,7 +1272,8 @@ class MasyarakatController extends Controller
 
     public function addpendataanPelatihan(Request $request){
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $this->data['title']="psmpelatihan";
 
         $requestPropinsiKabupaten = $client->request('GET', $baseUrl.'/api/getpropkab');
@@ -1191,7 +1301,8 @@ class MasyarakatController extends Controller
     public function editpendataanPelatihan(Request $request){
         $id = $request->id;
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
        $requestDataDetail= $client->request('GET', $baseUrl.'/api/psmpelatihan/'.$id,
@@ -1242,7 +1353,8 @@ class MasyarakatController extends Controller
     }
 
     public function inputpendataanPelatihan(Request $request){
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
        $anggaran = '';
        $client = new Client();
@@ -1446,7 +1558,8 @@ class MasyarakatController extends Controller
     public function updatependataanPelatihan(Request $request){
         $id = $request->input('id');
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $client = new Client();
@@ -1596,7 +1709,8 @@ class MasyarakatController extends Controller
        } else {
          $page = 1;
        }
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
 
 
@@ -1628,7 +1742,8 @@ class MasyarakatController extends Controller
 
     public function addpendataanKapasitas(Request $request){
        $client = new Client();
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $this->data['title']="psmpengembangan";
 
        $requestPropinsiKabupaten = $client->request('GET', $baseUrl.'/api/getpropkab');
@@ -1647,7 +1762,8 @@ class MasyarakatController extends Controller
     public function editpendataanKapasitas(Request $request){
         $id = $request->id;
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
        $requestDataDetail= $client->request('GET', $baseUrl.'/api/psmpengembangan/'.$id,
@@ -1679,7 +1795,8 @@ class MasyarakatController extends Controller
 
     public function inputpendataanKapasitas(Request $request){
 
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
 
        $client = new Client();
@@ -1779,7 +1896,8 @@ class MasyarakatController extends Controller
     public function updatependataanKapasitas(Request $request){
           $id = $request->input('id');
 
-          $baseUrl = URL::to('/');
+          $baseUrl = URL::to($this->urlapi());
+//          $baseUrl = URL::to('/');
           $token = $request->session()->get('token');
 
           $client = new Client();
@@ -1999,7 +2117,8 @@ class MasyarakatController extends Controller
     }
     public function addpsmSupervisi(Request $request){
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $this->data['title']="psmsupervisi";
 
         $requestPropinsiKabupaten = $client->request('GET', $baseUrl.'/api/getpropkab');
@@ -2020,7 +2139,8 @@ class MasyarakatController extends Controller
     public function editpsmSupervisi(Request $request){
         $id = $request->id;
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
        $requestDataDetail= $client->request('GET', $baseUrl.'/api/psmsupervisi/'.$id,
@@ -2065,7 +2185,8 @@ class MasyarakatController extends Controller
 
     public function inputpsmSupervisi(Request $request){
 
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
        $anggaran = '';
        $client = new Client();
@@ -2222,7 +2343,8 @@ class MasyarakatController extends Controller
     public function updatepsmSupervisi(Request $request){
           $id = $request->input('id');
 
-          $baseUrl = URL::to('/');
+          $baseUrl = URL::to($this->urlapi());
+//          $baseUrl = URL::to('/');
           $token = $request->session()->get('token');
 
           $client = new Client();
@@ -2354,7 +2476,8 @@ class MasyarakatController extends Controller
         } else {
          $page = 1;
         }
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
 
@@ -2386,7 +2509,8 @@ class MasyarakatController extends Controller
 
     public function addpsmOrmas(Request $request){
       $client = new Client();
-      $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
+//      $baseUrl = URL::to('/');
       $this->data['title']="psmsupervisi";
 
       $requestPropinsiKabupaten = $client->request('GET', $baseUrl.'/api/getpropkab');
@@ -2405,7 +2529,8 @@ class MasyarakatController extends Controller
     public function editpsmOrmas(Request $request){
         $id = $request->id;
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
        $requestDataDetail= $client->request('GET', $baseUrl.'/api/psmlsm/'.$id,
@@ -2433,7 +2558,8 @@ class MasyarakatController extends Controller
 
     public function inputpsmOrmas(Request $request){
 
-       $baseUrl = URL::to('/');
+       $baseUrl = URL::to($this->urlapi());
+//       $baseUrl = URL::to('/');
        $token = $request->session()->get('token');
 
        $client = new Client();
@@ -2480,7 +2606,8 @@ class MasyarakatController extends Controller
     public function updatepsmOrmas(Request $request){
         $id = $request->input('id');
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $client = new Client();

@@ -16,6 +16,7 @@ use App\Models\Dayamas\AltdevProfesiPeserta;
 use App\Models\Dayamas\MonevKawasanrawanPeserta;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Storage;
 
 class caseController extends Controller
 {
@@ -27,7 +28,8 @@ class caseController extends Controller
     public function inputNihil(Request $request){
       $user = $request->session()->get('user_data');
       $client = new Client();
-      $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
+//      $baseUrl = URL::to('/');
       $token = $request->session()->get('token');
       $requestNihil = $client->request('POST', $baseUrl.'/api/monitoringnihil',
           [
@@ -54,7 +56,8 @@ class caseController extends Controller
 
     public function inputTersangka(Request $request){
         $id = $request->input('id');
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         // dd($request->all());
@@ -153,7 +156,8 @@ class caseController extends Controller
     public function updateTersangka(Request $request){
         $id = $request->input('id');
         $id_tersangka = $request->input('tersangka_id');
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         // dd($request->all());
@@ -251,7 +255,8 @@ class caseController extends Controller
     }
 
     public function inputBrgBukti(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
 
@@ -313,7 +318,8 @@ class caseController extends Controller
     }
 
     public function updateBrgBukti(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
         $bbid = $request->input('bbId');
@@ -377,7 +383,8 @@ class caseController extends Controller
     }
 
     public function inputBrgBuktiPrekursor(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
 
@@ -440,7 +447,8 @@ class caseController extends Controller
     }
 
     public function updateBrgBuktiPrekursor(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('bbId');
 
@@ -503,7 +511,8 @@ class caseController extends Controller
     }
 
     public function inputBrgBuktiAdiktif(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
 
@@ -565,7 +574,8 @@ class caseController extends Controller
     }
 
     public function updateBrgBuktiAdiktif(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
         $bbid = $request->input('bbId');
@@ -629,7 +639,8 @@ class caseController extends Controller
     }
 
     public function inputBrgBuktiNonNar(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
 
@@ -692,7 +703,8 @@ class caseController extends Controller
     }
 
     public function updateBrgBuktiNonNar(Request $request){
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
         $id = $request->input('id');
         $bbid = $request->input('bbId');
@@ -756,7 +768,8 @@ class caseController extends Controller
     }
 
     public function inputBrgBuktiAset(Request $request){
-      $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
+//      $baseUrl = URL::to('/');
       $token = $request->session()->get('token');
       $id = $request->input('id');
       $nilai_aset = str_replace(",", "", $request->input('nilai_aset'));
@@ -830,7 +843,8 @@ class caseController extends Controller
     }
 
     public function updateBrgBuktiAset(Request $request){
-      $baseUrl = URL::to('/');
+      $baseUrl = URL::to($this->urlapi());
+//      $baseUrl = URL::to('/');
       $token = $request->session()->get('token');
       $id = $request->input('AsetId');
       $nilai_aset = str_replace(",", "", $request->input('nilai_aset'));
@@ -958,7 +972,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvorakor = $client->request('GET', $baseUrl.'/api/advorakor?page='.$page,
@@ -995,7 +1010,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advorakor/'.$id,
@@ -1035,7 +1051,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvojejaring = $client->request('GET', $baseUrl.'/api/advojejaring?page='.$page,
@@ -1072,7 +1089,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advojejaring/'.$id,
@@ -1112,7 +1130,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvoasistensi = $client->request('GET', $baseUrl.'/api/advoasistensi?page='.$page,
@@ -1149,7 +1168,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advoasistensi/'.$id,
@@ -1189,7 +1209,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvoasistensipenguatan = $client->request('GET', $baseUrl.'/api/advoasistensipenguatan?page='.$page,
@@ -1226,7 +1247,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advoasistensipenguatan/'.$id,
@@ -1266,7 +1288,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvointervensi = $client->request('GET', $baseUrl.'/api/advointervensi?page='.$page,
@@ -1303,7 +1326,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advointervensi/'.$id,
@@ -1343,7 +1367,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvosupervisi = $client->request('GET', $baseUrl.'/api/advosupervisi?page='.$page,
@@ -1380,7 +1405,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advosupervisi/'.$id,
@@ -1420,7 +1446,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvomonev = $client->request('GET', $baseUrl.'/api/advomonev?page='.$page,
@@ -1456,7 +1483,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advosupervisi/'.$id,
@@ -1496,7 +1524,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvobimtek = $client->request('GET', $baseUrl.'/api/advobimtek?page='.$page,
@@ -1532,7 +1561,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/advobimtek/'.$id,
@@ -1572,7 +1602,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestAdvososialisasi = $client->request('GET', $baseUrl.'/api/disemsosialisasi?page='.$page,
@@ -1610,7 +1641,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disemsosialisasi/'.$id,
@@ -1650,7 +1682,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDisemonline = $client->request('GET', $baseUrl.'/api/disemonline?page='.$page,
@@ -1687,7 +1720,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disemonline/'.$id,
@@ -1727,7 +1761,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDisempenyiaran = $client->request('GET', $baseUrl.'/api/disempenyiaran?page='.$page,
@@ -1765,7 +1800,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disempenyiaran/'.$id,
@@ -1805,7 +1841,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDisemcetak = $client->request('GET', $baseUrl.'/api/disemcetak?page='.$page,
@@ -1842,7 +1879,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disemcetak/'.$id,
@@ -1882,7 +1920,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDisemkonven = $client->request('GET', $baseUrl.'/api/disemkonven?page='.$page,
@@ -1919,7 +1958,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disemkonven/'.$id,
@@ -1959,7 +1999,8 @@ class caseController extends Controller
           $page = 1;
         }
 
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDisemvideotron = $client->request('GET', $baseUrl.'/api/disemvideotron?page='.$page,
@@ -1995,7 +2036,8 @@ class caseController extends Controller
         $prefix = explode('/',$request->route()->getPrefix());
         $route = $prefix[0];
         $client = new Client();
-        $baseUrl = URL::to('/');
+        $baseUrl = URL::to($this->urlapi());
+//        $baseUrl = URL::to('/');
         $token = $request->session()->get('token');
 
         $requestDataDetail= $client->request('GET', $baseUrl.'/api/disemvideotron/'.$id,
@@ -2208,6 +2250,55 @@ class caseController extends Controller
           $json_lokasi_lahan = "";
         }
         $this->form_params['meta_lokasi_lahan'] =  $json_lokasi_lahan;
+        $this->form_params['lokasi'] = $request->input('lokasi');
+        $this->form_params['keterangan_lainnya'] = $request->input('keterangan_lainnya');
+        
+        //generate image base64
+        if($request->hasFile('foto1')){
+            $filenameWithExt = $request->file('foto1')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto1')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto1')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image1 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja/'.$fileNameToStore);
+        }else{
+          $image1 = null;
+        }
+        $this->form_params['foto1'] = $image1;
+
+        if($request->hasFile('foto2')){
+            $filenameWithExt = $request->file('foto2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto2')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto2')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image2 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+        }else{
+          $image2 = null;
+        }
+        $this->form_params['foto2'] = $image2;
+
+        if($request->hasFile('foto3')){
+            $filenameWithExt = $request->file('foto3')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto3')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto3')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image3 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+        }else{
+          $image3 = null;
+        }
+        $this->form_params['foto3'] = $image3;
+        
         $data_request = execute_api_json('api/altdevlahan/','POST',$this->form_params);
 
         $trail['audit_menu'] = 'Pemberdayaan Masyarakat - Direktorat Alternative Development - Alih Fungsi Lahan Ganja';
@@ -2252,7 +2343,7 @@ class caseController extends Controller
 
     public function updateAltdevLahanGanja(Request $request){
         $id = $request->id;
-        $this->form_params = $request->except(['id','_token','lokasi_lahan','kodepenyelenggara','kodekomoditi']);
+        $this->form_params = $request->except(['id','_token','lokasi_lahan','kodepenyelenggara','kodekomoditi', 'foto1_old', 'foto2_old', 'foto3_old']);
         if($request->tgl_kegiatan){
           $date = str_replace('/', '-', $request->tgl_kegiatan);
           $this->form_params['tgl_kegiatan'] = date('Y-m-d',strtotime($date));
@@ -2280,6 +2371,55 @@ class caseController extends Controller
           $json_lokasi_lahan = "";
         }
         $this->form_params['meta_lokasi_lahan'] =  $json_lokasi_lahan;
+        $this->form_params['lokasi'] = $request->input('lokasi');
+        $this->form_params['keterangan_lainnya'] = $request->input('keterangan_lainnya');
+        
+        //generate image base64
+        if($request->hasFile('foto1')){
+            $filenameWithExt = $request->file('foto1')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto1')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto1')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image1 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/alihFungsiLahanGanja/'.$fileNameToStore);
+        }else{
+          $image1 = $request->input('foto1_old');
+        }
+        $this->form_params['foto1'] = $image1;
+
+        if($request->hasFile('foto2')){
+            $filenameWithExt = $request->file('foto2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto2')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto2')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image2 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+        }else{
+          $image2 = $request->input('foto2_old');
+        }
+        $this->form_params['foto2'] = $image2;
+
+        if($request->hasFile('foto3')){
+            $filenameWithExt = $request->file('foto3')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto3')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('foto3')->storeAs('Pemberdayaan/DirektoratAlternativeDevelopment', $fileNameToStore);
+            $image = public_path('upload/Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+            $data = file_get_contents($image);
+            $image3 = base64_encode($data);
+            Storage::delete('Pemberdayaan/DirektoratAlternativeDevelopment/'.$fileNameToStore);
+        }else{
+          $image3 = $request->input('foto3_old');
+        }
+        $this->form_params['foto3'] = $image3;
+                
         $data_request = execute_api_json('api/altdevlahan/'.$id,'PUT',$this->form_params);
 
         $trail['audit_menu'] = 'Pemberdayaan Masyarakat - Direktorat Alternative Development - Alih Fungsi Lahan Ganja';
