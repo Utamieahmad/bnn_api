@@ -19,7 +19,7 @@ use Excel;
 
 /**
  * @SWG\Swagger(
- *   basePath="/bnn/public/api",
+ *   basePath="/bnn_api/public/api",
  *   @SWG\Info(
  *     title="API Documentation BNN",
  *     version="1.0.0"
