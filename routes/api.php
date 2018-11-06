@@ -215,7 +215,7 @@ Route::group(['middleware' => ['auth:api', 'TokenCheck']], function () {
   Route::resource('entripasien', 'Rehab\EntriPasienAPIController');
   Route::resource('entripasienk', 'Rehab\EntriPasienKAPIController');
   Route::resource('infolembaga', 'Rehab\InfoUmumLembagaAPIController');
-  Route::resource('klaimpasien', 'Rehab\KlaimPasienAPIController');
+//  Route::resource('klaimpasien', 'Rehab\KlaimPasienAPIController');
   Route::resource('nspk', 'Rehab\NspkAPIController');
   Route::resource('pascaklienheader', 'Rehab\PascaKlienHeaderAPIController');
   Route::resource('pascaklienjalan', 'Rehab\PascaKlienRawatJalanAPIController');
