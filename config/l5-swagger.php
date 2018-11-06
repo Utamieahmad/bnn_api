@@ -141,7 +141,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'assets_public' => '/bnn_api/public/vendor/l5-swagger', //'assets_public' => '/vendor/l5-swagger',
+        'assets_public' => '/vendor/l5-swagger', //'assets_public' => '/bnn_api/public/vendor/l5-swagger',
 
         /*
         |--------------------------------------------------------------------------

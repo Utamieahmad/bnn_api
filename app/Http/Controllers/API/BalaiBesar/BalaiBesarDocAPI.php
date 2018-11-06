@@ -124,27 +124,6 @@
         *     type="string"
         *   ),
         *   @SWG\Parameter(
-        *     name="meta_instansi",
-        *     in="formData",
-        *     description="meta_instansi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
-        *     name="meta_bnn_instansi",
-        *     in="formData",
-        *     description="meta_bnn_instansi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
-        *     name="meta_materi",
-        *     in="formData",
-        *     description="meta_materi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
         *     name="bnn_jumlah_peserta",
         *     in="formData",
         *     description="bnn_jumlah_peserta",
@@ -239,27 +218,6 @@
         *     name="kode_instansi",
         *     in="formData",
         *     description="kode_instansi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
-        *     name="meta_instansi",
-        *     in="formData",
-        *     description="meta_instansi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
-        *     name="meta_bnn_instansi",
-        *     in="formData",
-        *     description="meta_bnn_instansi",
-        *     required=false,
-        *     type="string"
-        *   ),
-        *   @SWG\Parameter(
-        *     name="meta_materi",
-        *     in="formData",
-        *     description="meta_materi",
         *     required=false,
         *     type="string"
         *   ),

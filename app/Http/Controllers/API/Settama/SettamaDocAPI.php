@@ -131,13 +131,6 @@
     *     type="string"
     *   ),
     *   @SWG\Parameter(
-    *     name="meta_peserta",
-    *     in="formData",
-    *     description="meta peserta",
-    *     required=false,
-    *     type="string"
-    *   ),
-    *   @SWG\Parameter(
     *     name="file_laporan",
     *     in="formData",
     *     description="File laporan",
@@ -252,13 +245,6 @@
     *     name="sumber_anggaran",
     *     in="formData",
     *     description="Sumber anggaran",
-    *     required=false,
-    *     type="string"
-    *   ),
-    *   @SWG\Parameter(
-    *     name="meta_peserta",
-    *     in="formData",
-    *     description="meta peserta",
     *     required=false,
     *     type="string"
     *   ),
