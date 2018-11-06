@@ -4,7 +4,7 @@
         "title": "API Documentation BNN",
         "version": "1.0.0"
     },
-    "basePath": "/api",
+    "basePath": "/bnn_api/public/api",
     "paths": {
         "/anggaran": {
             "get": {
@@ -4298,6 +4298,1244 @@
                         "name": "id",
                         "in": "path",
                         "description": "ID data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/infolembaga": {
+            "get": {
+                "tags": [
+                    "Rehab Info Umum Lembaga"
+                ],
+                "summary": "Get List Data Rehab Info Umum Lembaga",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Rehab Info Umum Lembaga"
+                ],
+                "summary": "Create Data Rehab info umum lembaga",
+                "operationId": "create data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kategori",
+                        "in": "formData",
+                        "description": "Kategori",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama",
+                        "in": "formData",
+                        "description": "Nama",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_nama_notaris",
+                        "in": "formData",
+                        "description": "Legalitas lembaga nama notaris",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_noakta_notaris",
+                        "in": "formData",
+                        "description": "Legalitas lembaga no akta notaris",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_pemberi_ijin",
+                        "in": "formData",
+                        "description": "legalitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_wilayah_ijin",
+                        "in": "formData",
+                        "description": "legalitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_wilayah_ijin_kodepos",
+                        "in": "formData",
+                        "description": "kode pos",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_legalitas_masa_berlaku",
+                        "in": "formData",
+                        "description": "Tanggal legalitas (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_npwp",
+                        "in": "formData",
+                        "description": "Npwp",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat",
+                        "in": "formData",
+                        "description": "Alamat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat_kodepos",
+                        "in": "formData",
+                        "description": "kodepos",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat_idprovinsi",
+                        "in": "formData",
+                        "description": "id provinsi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "alamat_idkabkota",
+                        "in": "formData",
+                        "description": "id kab kota",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "nomor_telp",
+                        "in": "formData",
+                        "description": "No telepon",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "penanggung_jawab",
+                        "in": "formData",
+                        "description": "Penanggung jawab",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_nama",
+                        "in": "formData",
+                        "description": "Nama CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_telp",
+                        "in": "formData",
+                        "description": "No telepon CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_email",
+                        "in": "formData",
+                        "description": "Email CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_model_layanan",
+                        "in": "formData",
+                        "description": "Kode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_layanan_inap",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_layanan_jalan",
+                        "in": "formData",
+                        "description": "Periode jalan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_sumberbiaya",
+                        "in": "formData",
+                        "description": "kode sumber biaya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tarif_resmi_inap",
+                        "in": "formData",
+                        "description": "Tarif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tarif_resmi_jalan",
+                        "in": "formData",
+                        "description": "Tarif jalan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sdm_manajemen",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokterspesialis",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokterumum",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_psikolog",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_perawat",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_pekerjasosial",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_konseloradiksi",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_instruktur",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_administrasi",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_logistik",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_keamanan",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_saranaprasarana",
+                        "in": "formData",
+                        "description": "kode saran prasarana",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kapasitas_inap",
+                        "in": "formData",
+                        "description": "kapasitas",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kapasitas_jalan",
+                        "in": "formData",
+                        "description": "kapasitas_jalan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_assessment",
+                        "in": "formData",
+                        "description": "pelatihan_assessment",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_konseling",
+                        "in": "formData",
+                        "description": "pelatihan_konseling",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_micbt",
+                        "in": "formData",
+                        "description": "pelatihan_micbt",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_magang",
+                        "in": "formData",
+                        "description": "pelatihan_magang",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_lainnya",
+                        "in": "formData",
+                        "description": "pelatihan_lainnya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jumlah_klien_dilayani_sejak_awal_tahun",
+                        "in": "formData",
+                        "description": "jumlah_klien_dilayani_sejak_awal_tahun",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status_aktif",
+                        "in": "formData",
+                        "description": "status_aktif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_no_ijin_operasional",
+                        "in": "formData",
+                        "description": "legalitas_no_ijin_operasional",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_rawatan",
+                        "in": "formData",
+                        "description": "periode_rawatan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "bentuk_layanan",
+                        "in": "formData",
+                        "description": "bentuk_layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_adiksi",
+                        "in": "formData",
+                        "description": "pelatihan_adiksi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_intervensi",
+                        "in": "formData",
+                        "description": "pelatihan_intervensi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_fisiologi",
+                        "in": "formData",
+                        "description": "pelatihan_fisiologi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_tatalaksana",
+                        "in": "formData",
+                        "description": "pelatihan_tatalaksana",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_lainnya_jumlah",
+                        "in": "formData",
+                        "description": "pelatihan_lainnya_jumlah",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jml_inap_sosial",
+                        "in": "formData",
+                        "description": "jml_inap_sosial",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_jalan_sosial",
+                        "in": "formData",
+                        "description": "jml_jalan_sosial",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_jalan_medis",
+                        "in": "formData",
+                        "description": "jml_jalan_medis",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status_layanan",
+                        "in": "formData",
+                        "description": "status_layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sdm_dokter_umum",
+                        "in": "formData",
+                        "description": "sdm_dokter_umum",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spesialis_jiwa",
+                        "in": "formData",
+                        "description": "sdm_spesialis_jiwa",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokter_gigi",
+                        "in": "formData",
+                        "description": "sdm_dokter_gigi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spesialis_lain",
+                        "in": "formData",
+                        "description": "sdm_spesialis_lain",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_apoteker",
+                        "in": "formData",
+                        "description": "sdm_apoteker",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_analis",
+                        "in": "formData",
+                        "description": "sdm_analis",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_peksos",
+                        "in": "formData",
+                        "description": "sdm_peksos",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_konselor",
+                        "in": "formData",
+                        "description": "sdm_konselor",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spsi",
+                        "in": "formData",
+                        "description": "status_layanan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_skm",
+                        "in": "formData",
+                        "description": "sdm_skm",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_sag",
+                        "in": "formData",
+                        "description": "sdm_sag",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "layanan_pendekatan",
+                        "in": "formData",
+                        "description": "layanan_pendekatan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "layanan_ketersediaan",
+                        "in": "formData",
+                        "description": "layanan_ketersediaan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "layanan_pendekatan_lain",
+                        "in": "formData",
+                        "description": "layanan_pendekatan_lain",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jml_pasca_reg",
+                        "in": "formData",
+                        "description": "jml_pasca_reg",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_pasca_int",
+                        "in": "formData",
+                        "description": "jml_pasca_int",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_pasca_lnj",
+                        "in": "formData",
+                        "description": "jml_pasca_lnj",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/infolembaga/{id}": {
+            "get": {
+                "tags": [
+                    "Rehab Info Umum Lembaga"
+                ],
+                "summary": "Get List Data Rehab info umum lembaga by id",
+                "operationId": "get data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rehab Info Umum Lembaga"
+                ],
+                "summary": "Update Data Rehab info umum lembaga",
+                "operationId": "Update data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kategori",
+                        "in": "formData",
+                        "description": "Kategori",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama",
+                        "in": "formData",
+                        "description": "Nama",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_nama_notaris",
+                        "in": "formData",
+                        "description": "Legalitas lembaga nama notaris",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_noakta_notaris",
+                        "in": "formData",
+                        "description": "Legalitas lembaga no akta notaris",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_pemberi_ijin",
+                        "in": "formData",
+                        "description": "legalitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_wilayah_ijin",
+                        "in": "formData",
+                        "description": "legalitas",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_wilayah_ijin_kodepos",
+                        "in": "formData",
+                        "description": "kode pos",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_legalitas_masa_berlaku",
+                        "in": "formData",
+                        "description": "Tanggal legalitas (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_lembaga_npwp",
+                        "in": "formData",
+                        "description": "Npwp",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat",
+                        "in": "formData",
+                        "description": "Alamat",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat_kodepos",
+                        "in": "formData",
+                        "description": "kodepos",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "alamat_idprovinsi",
+                        "in": "formData",
+                        "description": "id provinsi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "alamat_idkabkota",
+                        "in": "formData",
+                        "description": "id kab kota",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "nomor_telp",
+                        "in": "formData",
+                        "description": "No telepon",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "penanggung_jawab",
+                        "in": "formData",
+                        "description": "Penanggung jawab",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_nama",
+                        "in": "formData",
+                        "description": "Nama CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_telp",
+                        "in": "formData",
+                        "description": "No telepon CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cp_email",
+                        "in": "formData",
+                        "description": "Email CP",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kode_model_layanan",
+                        "in": "formData",
+                        "description": "Kode",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_layanan_inap",
+                        "in": "formData",
+                        "description": "Periode",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "periode_layanan_jalan",
+                        "in": "formData",
+                        "description": "Periode jalan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_sumberbiaya",
+                        "in": "formData",
+                        "description": "kode sumber biaya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tarif_resmi_inap",
+                        "in": "formData",
+                        "description": "Tarif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tarif_resmi_jalan",
+                        "in": "formData",
+                        "description": "Tarif jalan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sdm_manajemen",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokterspesialis",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokterumum",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_psikolog",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_perawat",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_pekerjasosial",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_konseloradiksi",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_instruktur",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_administrasi",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_logistik",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_penunjang_keamanan",
+                        "in": "formData",
+                        "description": "SDM",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kode_saranaprasarana",
+                        "in": "formData",
+                        "description": "kode saran prasarana",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "kapasitas_inap",
+                        "in": "formData",
+                        "description": "kapasitas",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "kapasitas_jalan",
+                        "in": "formData",
+                        "description": "kapasitas_jalan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_assessment",
+                        "in": "formData",
+                        "description": "pelatihan_assessment",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_konseling",
+                        "in": "formData",
+                        "description": "pelatihan_konseling",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_micbt",
+                        "in": "formData",
+                        "description": "pelatihan_micbt",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_magang",
+                        "in": "formData",
+                        "description": "pelatihan_magang",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pelatihan_lainnya",
+                        "in": "formData",
+                        "description": "pelatihan_lainnya",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jumlah_klien_dilayani_sejak_awal_tahun",
+                        "in": "formData",
+                        "description": "jumlah_klien_dilayani_sejak_awal_tahun",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status_aktif",
+                        "in": "formData",
+                        "description": "status_aktif",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "legalitas_no_ijin_operasional",
+                        "in": "formData",
+                        "description": "legalitas_no_ijin_operasional",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "periode_rawatan",
+                        "in": "formData",
+                        "description": "periode_rawatan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "bentuk_layanan",
+                        "in": "formData",
+                        "description": "bentuk_layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_adiksi",
+                        "in": "formData",
+                        "description": "pelatihan_adiksi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_intervensi",
+                        "in": "formData",
+                        "description": "pelatihan_intervensi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_fisiologi",
+                        "in": "formData",
+                        "description": "pelatihan_fisiologi",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_tatalaksana",
+                        "in": "formData",
+                        "description": "pelatihan_tatalaksana",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "pelatihan_lainnya_jumlah",
+                        "in": "formData",
+                        "description": "pelatihan_lainnya_jumlah",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jml_inap_sosial",
+                        "in": "formData",
+                        "description": "jml_inap_sosial",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_jalan_sosial",
+                        "in": "formData",
+                        "description": "jml_jalan_sosial",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_jalan_medis",
+                        "in": "formData",
+                        "description": "jml_jalan_medis",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "status_layanan",
+                        "in": "formData",
+                        "description": "status_layanan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sdm_dokter_umum",
+                        "in": "formData",
+                        "description": "sdm_dokter_umum",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spesialis_jiwa",
+                        "in": "formData",
+                        "description": "sdm_spesialis_jiwa",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_dokter_gigi",
+                        "in": "formData",
+                        "description": "sdm_dokter_gigi",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spesialis_lain",
+                        "in": "formData",
+                        "description": "sdm_spesialis_lain",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_apoteker",
+                        "in": "formData",
+                        "description": "sdm_apoteker",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_analis",
+                        "in": "formData",
+                        "description": "sdm_analis",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_peksos",
+                        "in": "formData",
+                        "description": "sdm_peksos",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_konselor",
+                        "in": "formData",
+                        "description": "sdm_konselor",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_spsi",
+                        "in": "formData",
+                        "description": "status_layanan",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_skm",
+                        "in": "formData",
+                        "description": "sdm_skm",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sdm_sag",
+                        "in": "formData",
+                        "description": "sdm_sag",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "layanan_pendekatan",
+                        "in": "formData",
+                        "description": "layanan_pendekatan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "layanan_ketersediaan",
+                        "in": "formData",
+                        "description": "layanan_ketersediaan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "layanan_pendekatan_lain",
+                        "in": "formData",
+                        "description": "layanan_pendekatan_lain",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "status",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jml_pasca_reg",
+                        "in": "formData",
+                        "description": "jml_pasca_reg",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_pasca_int",
+                        "in": "formData",
+                        "description": "jml_pasca_int",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "jml_pasca_lnj",
+                        "in": "formData",
+                        "description": "jml_pasca_lnj",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rehab Info Umum Lembaga"
+                ],
+                "summary": "Delete Data Rehab info umum lembaga By id",
+                "operationId": "delete data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
                         "required": true,
                         "type": "integer"
                     }
