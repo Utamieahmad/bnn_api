@@ -4,7 +4,7 @@
         "title": "API Documentation BNN",
         "version": "1.0.0"
     },
-    "basePath": "/bnn_api/public/api",
+    "basePath": "/api",
     "paths": {
         "/anggaran": {
             "get": {
@@ -3978,6 +3978,278 @@
                 }
             }
         },
+        "/sopkebijakan": {
+            "get": {
+                "tags": [
+                    "Irtama Sop Kebijakan"
+                ],
+                "summary": "Get List Data Irtama Sop Kebijakan",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Irtama Sop Kebijakan"
+                ],
+                "summary": "Create Data Irtama SOP Kebijakan",
+                "operationId": "create data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sprin",
+                        "in": "formData",
+                        "description": "sprin",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_sprin",
+                        "in": "formData",
+                        "description": "tgl_sprin (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama_sop_kebijakan",
+                        "in": "formData",
+                        "description": "nama_sop_kebijakan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_sop_kebijakan",
+                        "in": "formData",
+                        "description": "jenis_sop_kebijakan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_sop",
+                        "in": "formData",
+                        "description": "tgl_sop (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "dokumen",
+                        "in": "formData",
+                        "description": "dokumen",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "status",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/sopkebijakan/{id}": {
+            "get": {
+                "tags": [
+                    "Irtama Sop Kebijakan"
+                ],
+                "summary": "Get List Data Irtama SOP Kebijakan by id",
+                "operationId": "get data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Irtama Sop Kebijakan"
+                ],
+                "summary": "Update Data Irtama SOP Kebijakan",
+                "operationId": "update data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id data",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "sprin",
+                        "in": "formData",
+                        "description": "sprin",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_sprin",
+                        "in": "formData",
+                        "description": "tgl_sprin (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "nama_sop_kebijakan",
+                        "in": "formData",
+                        "description": "nama_sop_kebijakan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "jenis_sop_kebijakan",
+                        "in": "formData",
+                        "description": "jenis_sop_kebijakan",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tgl_sop",
+                        "in": "formData",
+                        "description": "tgl_sop (Y-m-d)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "dokumen",
+                        "in": "formData",
+                        "description": "dokumen",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "formData",
+                        "description": "status",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Irtama Sop Kebijakan"
+                ],
+                "summary": "Delete Data Irtama sop kebijakan By id",
+                "operationId": "delete data by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "get data by id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
         "/monitoringnihil": {
             "get": {
                 "tags": [
@@ -4299,6 +4571,49 @@
                         "in": "path",
                         "description": "ID data",
                         "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/entripasienk": {
+            "get": {
+                "tags": [
+                    "Rehab Entri Pasien K"
+                ],
+                "summary": "Get List Data Rehab Entri Pasien K",
+                "operationId": "get data",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization Token",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "page",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "limit data",
+                        "required": false,
                         "type": "integer"
                     }
                 ],
