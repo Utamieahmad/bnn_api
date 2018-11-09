@@ -325,13 +325,6 @@
       *     type="string"
       *   ),
       *   @SWG\Parameter(
-      *     name="meta_jaringan_terkait",
-      *     in="formData",
-      *     description="meta_jaringan_terkait",
-      *     required=false,
-      *     type="string"
-      *   ),
-      *   @SWG\Parameter(
       *     name="status",
       *     in="formData",
       *     description="status",
