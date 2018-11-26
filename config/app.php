@@ -263,13 +263,13 @@ return [
     'magang_file_path'=>'upload/BalaiBesar/Magang',
     'berantas_ladang_ganja'=>'upload/Berantas/PemusnahanLadangGanja',
 
-    'url_simpeg'=>'http://integrasi.bnn.go.id:7001/simpeg/listSatker',
-    'url_satker'=>'http://integrasi.bnn.go.id:7001/simpeg/staffBySatker',
+    'url_simpeg'=>'https://integrasi.bnn.go.id/simpeg/listSatker',
+    'url_satker'=>'https://integrasi.bnn.go.id/simpeg/staffBySatker',
     /*id satker*/
     'satker_irtama' => 156,
 
     'bidang_tipe' => ['kinerja','keuangan','sdm','sarana'],
-    'url_soa' => 'http://integrasi.bnn.go.id:7001/',
+    'url_soa' => 'https://integrasi.bnn.go.id/',
     'email_bnn' => '@bnn.go.id',
     /*api balai lab*/
 ];
