@@ -23,14 +23,13 @@ Route::post('/forgot_password_process','AuthenticationController@forgot_password
 Route::get('/reset_password/{token}', 'AuthenticationController@reset_password')->name('reset_password');
 Route::post('/reset_password_process', 'AuthenticationController@reset_password')->name('reset_password_process');
 Route::get('/reset_email/{token}', 'AuthenticationController@reset_email')->name('reset_email');
-Route::get('/swagger', 'AuthenticationController@redirectToSwagger')->name('swagger');
+// Route::get('/swagger', 'AuthenticationController@redirectToSwagger')->name('swagger');
 // Route::get('/','DashboardController@dashboard')->name('dashboard'); //change default route to Swagger api
 
 Route::group(['middleware' => ['auth']], function () {
-	// Route::get('/','DashboardController@dashboard')->name('dashboard'); //change default route to Swagger api
-	Route::get('/',function(){
-		return redirect('/api/documentation');
-	});
+	Route::get('/swagger', 'AuthenticationController@redirectToSwagger')->name('swagger');
+	Route::get('/', 'AuthenticationController@redirectToSwagger');
+	Route::get('/api/documentation', 'SwaggerController@api');
 	Route::get('logout',function(){
 		Auth::logout();
 		return redirect('/login');

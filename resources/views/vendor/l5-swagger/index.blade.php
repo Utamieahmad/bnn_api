@@ -39,7 +39,23 @@ if (app()->environment() != 'testing') {
     <!-- <script src='lang/translator.js' type='text/javascript'></script> -->
     <!-- <script src='lang/ru.js' type='text/javascript'></script> -->
     <!-- <script src='lang/en.js' type='text/javascript'></script> -->
-
+    <style type="text/css">
+      .logout {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 8px;
+        font-size: 0.9em;
+        color: white !important;
+        background-color: #547f00;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -o-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -khtml-border-radius: 4px;
+        border-radius: 4px;
+        }
+    </style>
     <script type="text/javascript">
         $(function () {
             var url = window.location.search.match(/url=([^&]+)/);
@@ -135,6 +151,7 @@ if (app()->environment() != 'testing') {
             <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
             <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
             <div class='input'><a id="explore" href="#" data-sw-translate>Explore</a></div>
+            <div class='input'><a id="logout" class="logout" href="{{url('logout')}}" data-sw-translate>Logout</a></div>
         </form>
     </div>
 </div>

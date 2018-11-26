@@ -1,7 +1,7 @@
 
 body {
   /*color: #f7f7f7 !important;*/
-  background: #081F45 !important;
+  background: #89bf04 !important;
   font-family: "Open Sans", "Roboto Condensed", "Helvetica Neue", Arial !important; }
   body.login {
     background: url("../images/IMG_BG.jpg") no-repeat !important;
@@ -452,13 +452,13 @@ body {
   margin-left: 40px !important; }
 
 .bg-blue-bnn-1 {
-  background-color: #0b84cb; }
+  background-color: #547f00; }
 
 .login_wrapper {
   max-width: 640px !important; }
 
 .login_form {
-  background-color: rgba(18, 50, 104, 0.9);
+  background-color: #547f00;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
 
