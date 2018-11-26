@@ -208,7 +208,7 @@ class AuthenticationController extends Controller
             $request->session()->put('foto_pegawai', Auth::user()->foto_pegawai);
           }
 
-          return redirect('/swagger');
+          return redirect('/');
         }else {
           return view('auth.nip');
         }
