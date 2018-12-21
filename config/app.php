@@ -180,6 +180,7 @@ return [
         'Collective\Html\HtmlServiceProvider',
         App\Providers\HelperServiceProvider::class,
         L5Swagger\L5SwaggerServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -232,6 +233,7 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
     'limit'=>10,
@@ -264,12 +266,17 @@ return [
     'berantas_ladang_ganja'=>'upload/Berantas/PemusnahanLadangGanja',
 
     'url_simpeg'=>'https://integrasi.bnn.go.id/simpeg/listSatker',
-    'url_satker'=>'https://integrasi.bnn.go.id/simpeg/staffBySatker',
+    'url_satker'=>'https://integrasi.bnn.go.id/simpeg/staffBySatker/',
     /*id satker*/
     'satker_irtama' => 156,
 
     'bidang_tipe' => ['kinerja','keuangan','sdm','sarana'],
     'url_soa' => 'https://integrasi.bnn.go.id/',
+    // 'url_soadev' => 'http://103.3.70.160:7004/sinapp/',
+    // 'url_soadev2' => 'http://103.3.70.160:7004/',
+    'url_soakemenkeu' => 'http://10.210.84.13:8080/kemenkeu/api/data/',//'url_soakemenkeu' => 'http://103.3.70.167:8080/kemenkeu/api/data/',
+    'url_api_local' => env('URL_API_LOCAL', 'http://localhost/bnn_api/public'),
     'email_bnn' => '@bnn.go.id',
+    'url_ldap' => env('URL_LDAP', 'http://10.210.84.11:7004'),
     /*api balai lab*/
 ];
