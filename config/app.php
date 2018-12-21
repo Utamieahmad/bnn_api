@@ -180,7 +180,6 @@ return [
         'Collective\Html\HtmlServiceProvider',
         App\Providers\HelperServiceProvider::class,
         L5Swagger\L5SwaggerServiceProvider::class,
-        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -233,7 +232,6 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
     'limit'=>10,
